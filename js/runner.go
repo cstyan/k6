@@ -245,6 +245,8 @@ func (u *VU) RunOnce(ctx context.Context) ([]stats.Sample, error) {
 		CookieJar:     cookieJar,
 		RPSLimit:      u.Runner.RPSLimit,
 		BPool:         u.BPool,
+		Vu:            u.ID,
+		Iteration:     u.Iteration,
 	}
 	u.Dialer.BytesRead = &state.BytesRead
 	u.Dialer.BytesWritten = &state.BytesWritten
